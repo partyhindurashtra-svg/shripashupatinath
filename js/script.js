@@ -88,6 +88,7 @@
   if (ss) {
     var slides = [].slice.call(ss.querySelectorAll(".slide"));
     var dotsWrap = document.getElementById("slideDots");
+    var heroEl = document.getElementById("home");
     var cur = 0, ssTimer;
     slides.forEach(function (sl, i) {
       var d = document.createElement("button");
@@ -95,13 +96,17 @@
       d.addEventListener("click", function () { showSlide(i); restartSS(); });
       dotsWrap.appendChild(d);
       var im = sl.querySelector("img");
-      if (im) im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
+      // Only the poster opens full-size (hero photos stay as background)
+      if (im && sl.classList.contains("poster-slide")) {
+        im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
+      }
     });
     var dots = [].slice.call(dotsWrap.children);
     function showSlide(i) {
       cur = (i + slides.length) % slides.length;
       slides.forEach(function (s, k) { s.classList.toggle("active", k === cur); });
       dots.forEach(function (d, k) { d.classList.toggle("active", k === cur); });
+      if (heroEl) heroEl.classList.toggle("show-poster", slides[cur].classList.contains("poster-slide"));
     }
     function nextSS() { showSlide(cur + 1); }
     function restartSS() { clearInterval(ssTimer); ssTimer = setInterval(nextSS, 4500); }
