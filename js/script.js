@@ -83,6 +83,37 @@
     });
   }
 
+  /* ---- Homepage slideshow ---- */
+  var ss = document.getElementById("slideshow");
+  if (ss) {
+    var slides = [].slice.call(ss.querySelectorAll(".slide"));
+    var dotsWrap = document.getElementById("slideDots");
+    var cur = 0, ssTimer;
+    slides.forEach(function (sl, i) {
+      var d = document.createElement("button");
+      d.setAttribute("aria-label", "Go to slide " + (i + 1));
+      d.addEventListener("click", function () { showSlide(i); restartSS(); });
+      dotsWrap.appendChild(d);
+      var im = sl.querySelector("img");
+      if (im) im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
+    });
+    var dots = [].slice.call(dotsWrap.children);
+    function showSlide(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.classList.toggle("active", k === cur); });
+      dots.forEach(function (d, k) { d.classList.toggle("active", k === cur); });
+    }
+    function nextSS() { showSlide(cur + 1); }
+    function restartSS() { clearInterval(ssTimer); ssTimer = setInterval(nextSS, 4500); }
+    var pv = document.getElementById("slidePrev"), nx = document.getElementById("slideNext");
+    if (pv) pv.addEventListener("click", function () { showSlide(cur - 1); restartSS(); });
+    if (nx) nx.addEventListener("click", function () { showSlide(cur + 1); restartSS(); });
+    ss.addEventListener("mouseenter", function () { clearInterval(ssTimer); });
+    ss.addEventListener("mouseleave", restartSS);
+    showSlide(0);
+    restartSS();
+  }
+
   /* ---- Mobile nav ---- */
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");
