@@ -2,32 +2,37 @@
 (function () {
   "use strict";
 
-  /* ---- Darshan gallery (finished dham) ---- */
-  var darshan = [
-    { src: "assets/gallery/finished-01.jpg", cap: "Shri Pashupatinath Dham, Hassangarh" },
-    { src: "assets/gallery/finished-02.jpg", cap: "The dham amid its sacred grove" },
-    { src: "assets/gallery/finished-03.jpg", cap: "The temple entrance" },
-    { src: "assets/gallery/finished-06.jpg", cap: "The sanctum & Shivling within" },
-    { src: "assets/gallery/finished-04.jpg", cap: "Darshan at the dham" },
-    { src: "assets/gallery/finished-05.jpg", cap: "The dham at golden hour" }
-  ];
-
-  /* ---- Construction & finishing gallery (during the making) ---- */
+  /* ---- Full journey gallery: land -> brick -> plaster -> finished dham ---- */
   var making = [
-    { src: "assets/gallery/making-01.jpg", cap: "The original sacred spot in open land" },
-    { src: "assets/gallery/making-02.jpg", cap: "Work begins at the site" },
-    { src: "assets/gallery/making-03.jpg", cap: "A senior sewak blesses the karya" },
-    { src: "assets/gallery/making-04.jpg", cap: "The brick sanctum takes shape" },
-    { src: "assets/gallery/making-05.jpg", cap: "The temple takes form in brick" },
-    { src: "assets/gallery/making-06.jpg", cap: "The brick shikhara" },
-    { src: "assets/gallery/making-07.jpg", cap: "The timber roof framework within" },
-    { src: "assets/gallery/making-08.jpg", cap: "Scaffolding inside the sanctum" },
-    { src: "assets/gallery/making-09.jpg", cap: "Hand-laid brick walls" },
-    { src: "assets/gallery/making-10.jpg", cap: "The sanctum doorway" },
-    { src: "assets/gallery/making-11.jpg", cap: "Plastering complete — sewaks visit" },
-    { src: "assets/gallery/making-12.jpg", cap: "The roof edge painted maroon" },
-    { src: "assets/gallery/making-13.jpg", cap: "The sacred sarovar beside the dham" },
-    { src: "assets/gallery/making-14.jpg", cap: "Tiling the Shivling base within" }
+    { src: "assets/gallery/img-01.jpg", cap: "The original sacred spot in open land" },
+    { src: "assets/gallery/img-02.jpg", cap: "The land being prepared" },
+    { src: "assets/gallery/img-03.jpg", cap: "Work begins at the site" },
+    { src: "assets/gallery/img-04.jpg", cap: "A senior sewak blesses the karya" },
+    { src: "assets/gallery/img-05.jpg", cap: "Material and shelter at the site" },
+    { src: "assets/gallery/img-06.jpg", cap: "The team at the dham grounds" },
+    { src: "assets/gallery/img-07.jpg", cap: "The brick sanctum takes shape" },
+    { src: "assets/gallery/img-08.jpg", cap: "The shikhara being raised" },
+    { src: "assets/gallery/img-09.jpg", cap: "The temple takes form in brick" },
+    { src: "assets/gallery/img-10.jpg", cap: "The shikhara over the sanctum" },
+    { src: "assets/gallery/img-11.jpg", cap: "Close view of the brick shikhara" },
+    { src: "assets/gallery/img-12.jpg", cap: "The completed brick shikhara" },
+    { src: "assets/gallery/img-13.jpg", cap: "Timber scaffolding within the sanctum" },
+    { src: "assets/gallery/img-14.jpg", cap: "The timber roof framework" },
+    { src: "assets/gallery/img-15.jpg", cap: "Inside the rising walls" },
+    { src: "assets/gallery/img-16.jpg", cap: "Interior of the shrine in progress" },
+    { src: "assets/gallery/img-17.jpg", cap: "The roof structure from within" },
+    { src: "assets/gallery/img-18.jpg", cap: "Hand-laid brick walls" },
+    { src: "assets/gallery/img-19.jpg", cap: "The sanctum doorway" },
+    { src: "assets/gallery/img-20.jpg", cap: "The sacred sarovar beside the dham" },
+    { src: "assets/gallery/img-21.jpg", cap: "Plastering complete — sewaks visit" },
+    { src: "assets/gallery/img-22.jpg", cap: "The roof edge painted maroon" },
+    { src: "assets/gallery/img-23.jpg", cap: "Tiling the Shivling base within" },
+    { src: "assets/gallery/img-24.jpg", cap: "The sanctum & Shivling within" },
+    { src: "assets/gallery/img-25.jpg", cap: "The finished temple entrance" },
+    { src: "assets/gallery/img-26.jpg", cap: "Darshan at the dham" },
+    { src: "assets/gallery/img-27.jpg", cap: "The dham at golden hour" },
+    { src: "assets/gallery/img-28.jpg", cap: "The finished dham in its grove" },
+    { src: "assets/gallery/img-29.jpg", cap: "Shri Pashupatinath Dham today" }
   ];
 
   function buildGallery(grid, list) {
@@ -49,7 +54,6 @@
     grid.appendChild(frag);
   }
 
-  buildGallery(document.getElementById("galleryGrid"), darshan);
   buildGallery(document.getElementById("makingGrid"), making);
 
   /* ---- Lightbox ---- */

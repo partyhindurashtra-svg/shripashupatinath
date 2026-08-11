@@ -114,7 +114,7 @@ img{max-width:100%;display:block}
 /* ===== Hero ===== */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;
   text-align:center;color:#fff;
-  background:linear-gradient(rgba(40,10,0,.15),rgba(40,10,0,.15)),url('../assets/gallery/finished-01.jpg') center/cover no-repeat;}
+  background:linear-gradient(rgba(40,10,0,.2),rgba(40,10,0,.2)),url('../assets/gallery/img-28.jpg') center/cover no-repeat;}
 .hero-overlay{position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(60,15,5,.55),rgba(60,15,5,.35) 40%,rgba(50,12,4,.78));}
 .hero-content{position:relative;z-index:2;max-width:820px;padding:2rem 1.4rem}
@@ -298,7 +298,7 @@ img{max-width:100%;display:block}
 /* ===== Making page hero ===== */
 .making-hero{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;
   text-align:center;color:#fff;
-  background:linear-gradient(rgba(50,15,5,.55),rgba(50,15,5,.7)),url('../assets/gallery/making-05.jpg') center/cover no-repeat;}
+  background:linear-gradient(rgba(50,15,5,.55),rgba(50,15,5,.7)),url('../assets/gallery/img-09.jpg') center/cover no-repeat;}
 .making-hero .hero-content{max-width:760px}
 .making-hero h1{font-size:clamp(2rem,5vw,3.4rem);text-shadow:0 4px 20px rgba(0,0,0,.6)}
 .back-link{display:inline-block;margin-bottom:1rem;color:var(--gold-soft)}
