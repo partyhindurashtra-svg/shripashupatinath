@@ -43,9 +43,10 @@ making.html         "The Making of the Dham" page
 css/styles.css      Theme
 js/script.js        Gallery, lightbox, nav, looping audio
 assets/
-  gallery/          Temple photographs (temple-01 … temple-30)
-  om-namah-shivaya.ogg   Looping prayer audio
-  om-chant.wav           Fallback "Om" drone
+  gallery/          finished-01…06 (completed dham) + making-01…14 (construction & finishing)
+  sri-rudram.ogg    Looping devotional chant (Rudra Prasnam)
+  maha-mrityunjaya.ogg   Fallback chant
+  kathmandu-pashupatinath.jpg  Pashupatinath Temple, Kathmandu
   dr-kk-saini.png        Portrait of Prof. Dr. K. K. Saini
 CNAME               Custom domain (shripashupatinath.com)
 ```
@@ -57,7 +58,9 @@ domain `shripashupatinath.com`.
 
 ## Credits
 
-- Prayer audio: *“Om Namah Shivaya”* by **Sachin Patel 78**,
+- Devotional chant: *“Rudra Prasnam”* (Mantra Manjusha),
+  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0), via Wikimedia Commons.
+- Kathmandu Pashupatinath photo: **Bijay Chaurasia**,
   [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons.
 - Temple photographs © Shri Pashupatinath Dham / Param Sewak Board.
 - Portrait & bio of Prof. Dr. K. K. Saini from [drkksaini.in](https://drkksaini.in/).

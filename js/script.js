@@ -2,42 +2,32 @@
 (function () {
   "use strict";
 
-  /* ---- Curated darshan gallery (main / completed dham) ---- */
+  /* ---- Darshan gallery (finished dham) ---- */
   var darshan = [
-    { src: "assets/gallery/temple-14.jpg", cap: "Shri Pashupatinath Dham amid the sacred grove" },
-    { src: "assets/gallery/temple-05.jpg", cap: "The dham standing at Hassangarh" },
-    { src: "assets/gallery/temple-19.jpg", cap: "The shikhara rising over the sanctum" },
-    { src: "assets/gallery/temple-01.jpg", cap: "The sanctum (garbhagriha) of Mahadev" },
-    { src: "assets/gallery/temple-24.jpg", cap: "Close view of the shikhara" },
-    { src: "assets/gallery/temple-10.jpg", cap: "The dham in the golden light of dawn" },
-    { src: "assets/gallery/temple-03.jpg", cap: "The sacred path to the temple" },
-    { src: "assets/gallery/temple-08.jpg", cap: "The sacred sarovar beside the dham" },
-    { src: "assets/gallery/temple-11.jpg", cap: "Holy waters near the dham" },
-    { src: "assets/gallery/temple-23.jpg", cap: "Serene sarovar at Hassangarh" }
+    { src: "assets/gallery/finished-01.jpg", cap: "Shri Pashupatinath Dham, Hassangarh" },
+    { src: "assets/gallery/finished-02.jpg", cap: "The dham amid its sacred grove" },
+    { src: "assets/gallery/finished-03.jpg", cap: "The temple entrance" },
+    { src: "assets/gallery/finished-06.jpg", cap: "The sanctum & Shivling within" },
+    { src: "assets/gallery/finished-04.jpg", cap: "Darshan at the dham" },
+    { src: "assets/gallery/finished-05.jpg", cap: "The dham at golden hour" }
   ];
 
-  /* ---- Construction gallery (during the making) ---- */
+  /* ---- Construction & finishing gallery (during the making) ---- */
   var making = [
-    { src: "assets/gallery/temple-02.jpg", cap: "The brick sanctum takes shape" },
-    { src: "assets/gallery/temple-04.jpg", cap: "The shikhara being raised" },
-    { src: "assets/gallery/temple-07.jpg", cap: "Devotees and workers at the site" },
-    { src: "assets/gallery/temple-09.jpg", cap: "A senior sewak blesses the karya" },
-    { src: "assets/gallery/temple-06.jpg", cap: "Timber scaffolding within the sanctum" },
-    { src: "assets/gallery/temple-16.jpg", cap: "The wooden roof framework" },
-    { src: "assets/gallery/temple-17.jpg", cap: "Inside the rising walls" },
-    { src: "assets/gallery/temple-25.jpg", cap: "Support posts hold the structure" },
-    { src: "assets/gallery/temple-26.jpg", cap: "The sanctum doorway under work" },
-    { src: "assets/gallery/temple-29.jpg", cap: "Brickwork of the inner shrine" },
-    { src: "assets/gallery/temple-30.jpg", cap: "The roof structure from within" },
-    { src: "assets/gallery/temple-15.jpg", cap: "Hand-laid brick walls" },
-    { src: "assets/gallery/temple-13.jpg", cap: "Material and shelter at the site" },
-    { src: "assets/gallery/temple-18.jpg", cap: "Materials gathered for construction" },
-    { src: "assets/gallery/temple-21.jpg", cap: "The team at the dham grounds" },
-    { src: "assets/gallery/temple-20.jpg", cap: "The land being prepared" },
-    { src: "assets/gallery/temple-12.jpg", cap: "Rising brick walls of the shrine" },
-    { src: "assets/gallery/temple-22.jpg", cap: "The completed brick shikhara" },
-    { src: "assets/gallery/temple-27.jpg", cap: "Interior of the shrine in progress" },
-    { src: "assets/gallery/temple-28.jpg", cap: "Beams and brick of the sanctum" }
+    { src: "assets/gallery/making-01.jpg", cap: "The original sacred spot in open land" },
+    { src: "assets/gallery/making-02.jpg", cap: "Work begins at the site" },
+    { src: "assets/gallery/making-03.jpg", cap: "A senior sewak blesses the karya" },
+    { src: "assets/gallery/making-04.jpg", cap: "The brick sanctum takes shape" },
+    { src: "assets/gallery/making-05.jpg", cap: "The temple takes form in brick" },
+    { src: "assets/gallery/making-06.jpg", cap: "The brick shikhara" },
+    { src: "assets/gallery/making-07.jpg", cap: "The timber roof framework within" },
+    { src: "assets/gallery/making-08.jpg", cap: "Scaffolding inside the sanctum" },
+    { src: "assets/gallery/making-09.jpg", cap: "Hand-laid brick walls" },
+    { src: "assets/gallery/making-10.jpg", cap: "The sanctum doorway" },
+    { src: "assets/gallery/making-11.jpg", cap: "Plastering complete — sewaks visit" },
+    { src: "assets/gallery/making-12.jpg", cap: "The roof edge painted maroon" },
+    { src: "assets/gallery/making-13.jpg", cap: "The sacred sarovar beside the dham" },
+    { src: "assets/gallery/making-14.jpg", cap: "Tiling the Shivling base within" }
   ];
 
   function buildGallery(grid, list) {
@@ -98,11 +88,14 @@
   if (audio && toggle) {
     audio.volume = 0.55;
     var icon = toggle.querySelector(".a-icon");
+    var label = toggle.querySelector(".a-label");
     var wantOn = true; // play by default
 
     function setUI(on) {
       if (icon) icon.textContent = on ? "🔊" : "🔇";
+      if (label) label.textContent = on ? "Mantra" : "Muted";
       toggle.classList.toggle("playing", on);
+      toggle.classList.toggle("muted", !on);
       toggle.title = on ? "Mantra playing — tap to mute" : "Tap to play mantra";
     }
 
