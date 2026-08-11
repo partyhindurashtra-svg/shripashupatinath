@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Pashupatinath Dham, Hassangarh | श्री पशुपतिनाथ धाम</title>
+  <meta name="description" content="Shri Pashupatinath Dham, Hassangarh, Sampla, Rohtak, Haryana — a sacred temple of Lord Shiva (Pashupati), inspired by the holy Pashupatinath Mandir of Kathmandu, Nepal, from where the Shivling was brought." />
+  <meta name="keywords" content="Pashupatinath, Shri Pashupatinath Dham, Hassangarh, Sampla, Rohtak, Haryana, Shiva temple, mandir, Shivling, Kathmandu, seva, bhandara, annadanam, donation" />
+  <meta property="og:title" content="Shri Pashupatinath Dham, Hassangarh" />
+  <meta property="og:description" content="A sacred abode of Lord Shiva in Hassangarh, Haryana — inspired by Pashupatinath, Kathmandu." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Devanagari:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
+</head>
+<body>
+
+  <!-- Background mantra audio (loops continuously) -->
+  <audio id="mantraAudio" loop preload="auto">
+    <source src="assets/om-namah-shivaya.ogg" type="audio/ogg" />
+    <source src="assets/om-chant.wav" type="audio/wav" />
+  </audio>
+  <button id="audioToggle" class="audio-toggle" aria-label="Play or pause mantra" title="Mantra"><span class="a-icon">🔊</span></button>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <span>🕉️ श्री पशुपतिनाथ धाम, हसनगढ़</span>
+    <span class="topbar-om">॥ ॐ नमः शिवाय ॥</span>
+  </div>
+
+  <!-- Continuously scrolling mantra marquee -->
+  <div class="mantra-marquee" aria-hidden="true">
+    <div class="mantra-track">
+      <span>॥ ॐ नमः शिवाय ॥</span><span>ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्</span><span>॥ हर हर महादेव ॥</span><span>ॐ तत्पुरुषाय विद्महे महादेवाय धीमहि तन्नो रुद्रः प्रचोदयात्</span><span>॥ जय पशुपतिनाथ ॥</span><span>कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारम्</span>
+      <span>॥ ॐ नमः शिवाय ॥</span><span>ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्</span><span>॥ हर हर महादेव ॥</span><span>ॐ तत्पुरुषाय विद्महे महादेवाय धीमहि तन्नो रुद्रः प्रचोदयात्</span><span>॥ जय पशुपतिनाथ ॥</span><span>कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारम्</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-icon">🔱</span>
+        <span class="brand-text">
+          <strong>Shri Pashupatinath Dham</strong>
+          <small>Hassangarh, Rohtak, Haryana</small>
+        </span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#significance">Significance</a>
+        <a href="#kathmandu">Kathmandu</a>
+        <a href="#bhandara">Annadान</a>
+        <a href="#board">Sewak Board</a>
+        <a href="#gallery">Gallery</a>
+        <a href="making.html">The Making</a>
+        <a href="#contact" class="btn-donate">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-mantra">॥ ॐ तत्पुरुषाय विद्महे महादेवाय धीमहि तन्नो रुद्रः प्रचोदयात् ॥</p>
+      <h1>Shri Pashupatinath Dham</h1>
+      <p class="hero-sub-hi">श्री पशुपतिनाथ धाम, हसनगढ़</p>
+      <p class="hero-desc">A sacred abode of Lord Shiva standing in Hassangarh, Haryana — inspired by the holy Pashupatinath Mandir of Kathmandu, Nepal, from where the revered Shivling was brought.</p>
+      <div class="hero-btns">
+        <a href="#about" class="btn btn-primary">🔱 Enter the Dham</a>
+        <a href="#bhandara" class="btn btn-ghost">🍲 Annual Bhandara</a>
+      </div>
+    </div>
+    <div class="hero-scroll">▼</div>
+  </section>
+
+  <!-- Sacred quote strip -->
+  <section class="quote-strip">
+    <p class="quote-dev">कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारम् ।<br/>सदावसन्तं हृदयारविन्दे भवं भवानीसहितं नमामि ॥</p>
+    <p class="quote-en">"I bow to Lord Shiva, pure and white as camphor, the incarnation of compassion, the very essence of the world, who wears the king of serpents as a garland — ever dwelling in the lotus of my heart, together with Bhavani."</p>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="eyebrow">॥ हर हर महादेव ॥</span>
+      <h2>About the Dham</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>Shri Pashupatinath Dham</strong> is a sacred Shiva temple that stands in the village of <strong>Hassangarh, Sampla, District Rohtak, Haryana</strong>. Dedicated to <em>Bhagwan Shiva</em> in His most benevolent form as <strong>Pashupati — the Lord and protector of all living beings</strong> — the dham is a centre of devotion, seva, meditation and community upliftment.</p>
+        <p>Built stone by stone through the shraddha and seva of devotees, the temple's spiritual heart is a sacred <strong>Shivling brought from the world-renowned Pashupatinath Mandir of Kathmandu, Nepal</strong> — one of the holiest Shaiva shrines on earth — establishing an eternal bond between the two dhams.</p>
+        <p>The dham was raised from open land beside a sacred sarovar (pond). To relive that journey of faith, visit <a href="making.html"><strong>“The Making of the Dham”</strong></a>. Today, guided by the <strong>Param Sewak Board</strong>, it welcomes every devotee to offer prayers and share in its living tradition of faith and service.</p>
+      </div>
+      <div class="about-cards">
+        <div class="mini-card"><span>🔱</span><h4>Ishta Dev</h4><p>Bhagwan Shiva as Pashupatinath, Lord of all beings</p></div>
+        <div class="mini-card"><span>📍</span><h4>Location</h4><p>Hassangarh, Sampla, Rohtak-124404, Haryana</p></div>
+        <div class="mini-card"><span>🛕</span><h4>Sacred Shivling</h4><p>Brought from Pashupatinath, Kathmandu, Nepal</p></div>
+        <div class="mini-card"><span>🍲</span><h4>Annual Bhandara</h4><p>Free food for all — every 30th November</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Significance -->
+  <section class="section section-alt" id="significance">
+    <div class="section-head">
+      <span class="eyebrow">The Meaning of Pashupati</span>
+      <h2>Significance of Lord Pashupatinath</h2>
+    </div>
+    <div class="sig-intro">
+      <p>The name <strong>Pashupati</strong> (पशुपति) means <em>"Lord of all creatures"</em> — <strong>Pashu</strong> (all living beings) and <strong>Pati</strong> (lord, protector). It is one of the most compassionate forms of Bhagwan Shiva, who watches over every soul and liberates it from the bondage of worldly existence.</p>
+    </div>
+    <div class="sig-grid">
+      <div class="sig-card">
+        <h3>🐾 Protector of All Beings</h3>
+        <p>As Pashupati, Shiva is the shepherd who guides every jiva (soul) from ignorance to liberation. He is worshipped as the compassionate guardian of all creation.</p>
+      </div>
+      <div class="sig-card">
+        <h3>🕉️ Path to Moksha</h3>
+        <p>Devotion to Pashupatinath is believed to free the soul from the endless cycle of birth and death, granting <em>moksha</em> — the ultimate spiritual liberation.</p>
+      </div>
+      <div class="sig-card">
+        <h3>🌊 The Holiest Shaiva Shrine</h3>
+        <p>Pashupatinath in Kathmandu, on the banks of the sacred Bagmati, is revered as the holiest temple of Lord Shiva — a religious foundation dating back over 2,000 years.</p>
+      </div>
+      <div class="sig-card">
+        <h3>🔥 Maha Shivaratri</h3>
+        <p>The dham is a living centre of Shiva worship. On Maha Shivaratri, devotees gather to offer bael leaves, milk and prayers to Mahadev.</p>
+      </div>
+    </div>
+
+    <div class="mantra-block">
+      <h3>Sacred Mantras of Mahadev</h3>
+      <div class="mantra-cards">
+        <div class="mantra-card">
+          <p class="m-dev">॥ ॐ नमः शिवाय ॥</p>
+          <p class="m-en">Om Namah Shivaya — "I bow to Lord Shiva." The eternal Panchakshara mantra.</p>
+        </div>
+        <div class="mantra-card">
+          <p class="m-dev">ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् ।<br/>उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय माऽमृतात् ॥</p>
+          <p class="m-en">The Maha Mrityunjaya Mantra — invoking Lord Shiva for health, protection and freedom from the fear of death.</p>
+        </div>
+        <div class="mantra-card">
+          <p class="m-dev">ॐ तत्पुरुषाय विद्महे<br/>महादेवाय धीमहि<br/>तन्नो रुद्रः प्रचोदयात् ॥</p>
+          <p class="m-en">The Rudra Gayatri — a prayer for the light of Lord Rudra (Shiva) to illumine our intellect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kathmandu Connection -->
+  <section class="section kathmandu" id="kathmandu">
+    <div class="section-head">
+      <span class="eyebrow">An Eternal Bond</span>
+      <h2>The Kathmandu Connection</h2>
+    </div>
+    <div class="kath-grid">
+      <div class="kath-text">
+        <p>The spiritual inspiration for Shri Pashupatinath Dham flows directly from the legendary <strong>Pashupatinath Mandir of Kathmandu, Nepal</strong> — the holiest Hindu temple of Nepal, standing on the banks of the sacred <strong>Bagmati River</strong>.</p>
+        <p>The sacred <strong>Shivling installed at our dham has been brought from Pashupatinath, Kathmandu</strong>, carrying with it the divine energy and blessings of that ancient shrine to the soil of Hassangarh.</p>
+        <ul class="kath-facts">
+          <li><strong>UNESCO World Heritage Site</strong> — designated in 1979 for its cultural and religious importance.</li>
+          <li><strong>Over 2,000 years of worship</strong> — a religious foundation dating to at least the 5th century BCE.</li>
+          <li><strong>Pagoda architecture</strong> — a two-storey gilt-roofed pagoda with silver doors, surrounded by more than 500 shrines.</li>
+          <li><strong>Sacred legend</strong> — it is believed Shiva and Parvati once roamed the Kathmandu valley in the form of deer, marking this holy ground.</li>
+        </ul>
+      </div>
+      <div class="kath-quote">
+        <blockquote>
+          "Dying and being cremated at Pashupatinath is believed to ensure moksha — liberation from the cycle of birth and rebirth."
+        </blockquote>
+        <p class="kath-cite">— On the sanctity of Pashupatinath, Kathmandu</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Annual Bhandara / Annadanam -->
+  <section class="section bhandara" id="bhandara">
+    <div class="bhandara-inner">
+      <span class="eyebrow light">॥ अन्नदानं महादानम् ॥</span>
+      <h2>Annual Bhandara — Seva of Annadान</h2>
+      <p class="bhandara-lead">In the spirit of Mahadev's boundless compassion, Shri Pashupatinath Dham hosts a <strong>grand annual Bhandara</strong> — a free community feast open to <strong>all, without distinction</strong>.</p>
+      <div class="bhandara-date">
+        <div class="date-badge">
+          <span class="d-day">30</span>
+          <span class="d-mon">November</span>
+        </div>
+        <p><strong>Every Year on 30th November</strong><br/>Prasad and a wholesome meal are served to every devotee and visitor who comes to the dham. <em>Annadान</em> — the giving of food — is among the highest forms of daan, and all are warmly invited to partake and to serve.</p>
+      </div>
+      <p class="bhandara-note">🙏 All devotees and well-wishers are warmly invited to attend and to serve. Sabka swagat hai — everyone is welcome.</p>
+    </div>
+  </section>
+
+  <!-- Param Sewak Board -->
+  <section class="section" id="board">
+    <div class="section-head">
+      <span class="eyebrow">परम सेवक मण्डल</span>
+      <h2>Param Sewak Board</h2>
+      <p class="section-lead">The devoted sewaks guiding the vision and service of Shri Pashupatinath Dham.</p>
+    </div>
+    <div class="board-grid">
+      <div class="board-card">
+        <div class="board-avatar">🎖️</div>
+        <h3>Col Bhajan Saini <span>(Retd.)</span></h3>
+        <p class="role">Chairman</p>
+      </div>
+      <div class="board-card">
+        <div class="board-avatar">🙏</div>
+        <h3>Sh Rameshwer Dass Saini</h3>
+        <p class="role">President</p>
+      </div>
+      <div class="board-card">
+        <div class="board-avatar">🌸</div>
+        <h3>Smt. Maheshwari Saini</h3>
+        <p class="role">Vice Chairman</p>
+      </div>
+      <div class="board-card">
+        <div class="board-avatar">🔱</div>
+        <h3>Er Aditya Saini</h3>
+        <p class="role">Vice President</p>
+      </div>
+      <div class="board-card featured">
+        <div class="board-avatar has-photo"><img src="assets/dr-kk-saini.png" alt="Prof. Dr. K. K. Saini" loading="lazy"/></div>
+        <h3>Prof. Dr. Kamlesh Kumar Saini</h3>
+        <p class="role">General Secretary</p>
+        <p class="board-bio">32 years in technical teaching, research &amp; administration — from Lecturer to Director-General. <a href="https://drkksaini.in/" target="_blank" rel="noopener">drkksaini.in ↗</a></p>
+      </div>
+      <div class="board-card">
+        <div class="board-avatar">🪔</div>
+        <h3>Dr Mehak Saini</h3>
+        <p class="role">Treasurer</p>
+      </div>
+      <div class="board-card">
+        <div class="board-avatar">⭐</div>
+        <h3>Dr Sanju Saini</h3>
+        <p class="role">Executive Member</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-alt" id="gallery">
+    <div class="section-head">
+      <span class="eyebrow">Darshan</span>
+      <h2>Gallery</h2>
+      <p class="section-lead">Glimpses of Shri Pashupatinath Dham and its sacred surroundings in Hassangarh.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"><!-- populated by script.js --></div>
+    <div class="gallery-cta">
+      <a href="making.html" class="btn btn-primary">🧱 See “The Making of the Dham”</a>
+    </div>
+  </section>
+
+  <!-- Contributions note -->
+  <section class="section donate" id="seva">
+    <div class="donate-inner">
+      <span class="eyebrow light">॥ सेवा ॥</span>
+      <h2>Seva & Contributions</h2>
+      <p>This website is shared purely for <strong>information and darshan</strong> — the dham runs no online donation drive. Should any devotee wish to offer voluntary seva or a contribution towards the temple or its annual Bhandara, it is most welcome, entirely at your own wish.</p>
+      <p class="donate-note">For any such contribution, kindly connect directly with <strong>Prof. Dr. K. K. Saini</strong> (General Secretary, Param Sewak Board). <em>Hara Hara Mahadev.</em></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-head">
+      <span class="eyebrow">Reach Us</span>
+      <h2>Contact & Location</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Shri Pashupatinath Dham</h3>
+        <p class="addr">
+          Hassangarh, Sampla,<br/>
+          District Rohtak — 124404,<br/>
+          Haryana, India
+        </p>
+        <ul class="contact-list">
+          <li><strong>Village:</strong> Hassangarh</li>
+          <li><strong>Tehsil:</strong> Sampla</li>
+          <li><strong>District:</strong> Rohtak, Haryana</li>
+          <li><strong>PIN:</strong> 124404</li>
+        </ul>
+        <p class="contact-cta">For darshan timings, the annual Bhandara, or to offer any voluntary seva, kindly reach out to the Param Sewak Board.</p>
+        <div class="contact-person">
+          <img src="assets/dr-kk-saini.png" alt="Prof. Dr. K. K. Saini" />
+          <div>
+            <strong>Prof. Dr. K. K. Saini</strong>
+            <small>General Secretary, Param Sewak Board — point of contact for seva &amp; contributions</small>
+            <small class="cp-qual">BE, MTech (ECE), PhD (Engg.), MBA (USA) · 32 yrs teaching, research &amp; administration</small>
+            <a href="https://drkksaini.in/" target="_blank" rel="noopener">drkksaini.in ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          title="Location of Shri Pashupatinath Dham, Hassangarh"
+          src="https://maps.google.com/maps?q=Hassangarh%2C%20Sampla%2C%20Rohtak%2C%20Haryana%20124404&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">🔱</span>
+        <div>
+          <strong>Shri Pashupatinath Dham</strong>
+          <p>Hassangarh, Sampla, Rohtak-124404, Haryana, India</p>
+        </div>
+      </div>
+      <p class="footer-mantra">॥ ॐ नमः शिवाय ॥ &nbsp;•&nbsp; ॥ हर हर महादेव ॥</p>
+      <p class="footer-copy">© <span id="year"></span> Shri Pashupatinath Dham, Hassangarh. Managed by the Param Sewak Board. &nbsp;|&nbsp; shripashupatinath.com</p>
+      <p class="footer-credit">Prayer audio: “Om Namah Shivaya” by Sachin Patel 78, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" id="lbClose">✕</span>
+    <img id="lbImg" src="" alt="Darshan" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
