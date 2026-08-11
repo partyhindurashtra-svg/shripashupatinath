@@ -32,7 +32,13 @@
     { src: "assets/gallery/img-26.jpg", cap: "Darshan at the dham" },
     { src: "assets/gallery/img-27.jpg", cap: "The dham at golden hour" },
     { src: "assets/gallery/img-28.jpg", cap: "The finished dham in its grove" },
-    { src: "assets/gallery/img-29.jpg", cap: "Shri Pashupatinath Dham today" }
+    { src: "assets/gallery/img-29.jpg", cap: "Shri Pashupatinath Dham today" },
+    { src: "assets/gallery/img-34.jpg", cap: "Kalash Yatra by the sacred sarovar" },
+    { src: "assets/gallery/img-35.jpg", cap: "Havan during the Pran Pratishtha" },
+    { src: "assets/gallery/img-30.jpg", cap: "The Saini family offering worship" },
+    { src: "assets/gallery/img-31.jpg", cap: "The family with trishuls at the dham" },
+    { src: "assets/gallery/img-32.jpg", cap: "Elders of the family at the ceremony" },
+    { src: "assets/gallery/img-33.jpg", cap: "Dr. Kamlesh Kumar Saini with family" }
   ];
 
   function buildGallery(grid, list) {
@@ -70,6 +76,11 @@
     lbClose.addEventListener("click", closeLightbox);
     lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
+    // Wire up static images (poster, ceremony, Kathmandu, progress) to the lightbox
+    document.querySelectorAll(".prat-poster img, .prat-photos figure img, .kath-photo img, .progress-imgs figure img").forEach(function (im) {
+      im.style.cursor = "zoom-in";
+      im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
+    });
   }
 
   /* ---- Mobile nav ---- */
@@ -85,6 +96,66 @@
   /* ---- Footer year ---- */
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ---- Countdown to next Bhandara (from now until 30 Nov 2026) ---- */
+  var cd = document.getElementById("countdown");
+  if (cd) {
+    var target = new Date(cd.getAttribute("data-target") || "2026-11-30T09:00:00").getTime();
+    var elD = document.getElementById("cd-days"),
+        elH = document.getElementById("cd-hours"),
+        elM = document.getElementById("cd-mins"),
+        elS = document.getElementById("cd-secs");
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    var tick = function () {
+      var diff = target - Date.now();
+      if (diff <= 0) {
+        if (elD) elD.textContent = "0";
+        if (elH) elH.textContent = "00";
+        if (elM) elM.textContent = "00";
+        if (elS) elS.textContent = "00";
+        var h3 = cd.querySelector("h3");
+        if (h3) h3.textContent = "🙏 The Bhandara is here — Sabka swagat hai!";
+        return;
+      }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      if (elD) elD.textContent = d;
+      if (elH) elH.textContent = pad(h);
+      if (elM) elM.textContent = pad(m);
+      if (elS) elS.textContent = pad(s);
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  /* ---- Visit counter (global via CountAPI, with local fallback) ---- */
+  var vc = document.getElementById("visitCount");
+  if (vc) {
+    var fmt = function (n) { return Number(n).toLocaleString("en-IN"); };
+    var localBump = function () {
+      var base = 1000; // seed so the number looks established
+      var n = parseInt(localStorage.getItem("spd_visits") || "0", 10);
+      if (!sessionStorage.getItem("spd_counted_session")) {
+        n += 1;
+        localStorage.setItem("spd_visits", String(n));
+        sessionStorage.setItem("spd_counted_session", "1");
+      }
+      vc.textContent = fmt(base + n);
+    };
+    // Try a global counter first; fall back to local if unavailable
+    var done = false;
+    var timer = setTimeout(function () { if (!done) { done = true; localBump(); } }, 3500);
+    fetch("https://api.counterapi.dev/v1/shripashupatinath-com/visits/up")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (done) return; done = true; clearTimeout(timer);
+        var count = data && (data.count != null ? data.count : (data.value != null ? data.value : null));
+        if (count != null) vc.textContent = fmt(count); else localBump();
+      })
+      .catch(function () { if (done) return; done = true; clearTimeout(timer); localBump(); });
+  }
 
   /* ---- Looping mantra audio ---- */
   var audio = document.getElementById("mantraAudio");
