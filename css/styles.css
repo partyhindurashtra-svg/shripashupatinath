@@ -200,6 +200,7 @@ img{max-width:100%;display:block}
 @media(max-width:820px){.about-grid{grid-template-columns:1fr}}
 
 /* ===== Significance ===== */
+.sig-subhead{margin-top:3.4rem;padding-top:3rem;border-top:1px solid var(--cream-2)}
 .sig-intro{max-width:820px;margin:0 auto 2.4rem;text-align:center;color:var(--ink-soft);font-size:1.05rem}
 .sig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.3rem}
 .sig-card{background:#fff;border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow);
@@ -289,9 +290,10 @@ img{max-width:100%;display:block}
 .footer-visits span{color:var(--gold-soft);font-weight:600}
 
 /* ===== Board ===== */
-.board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
-@media(max-width:860px){.board-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:440px){.board-grid{grid-template-columns:1fr}}
+.board-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.3rem}
+.board-grid .board-card{flex:0 1 232px}
+@media(max-width:520px){.board-grid .board-card{flex:0 1 46%}}
+@media(max-width:400px){.board-grid .board-card{flex-basis:100%}}
 .board-card{background:#fff;border-radius:var(--radius);padding:1.6rem 1.2rem;text-align:center;
   box-shadow:var(--shadow);border-bottom:4px solid var(--gold);transition:.25s}
 .board-card:hover{transform:translateY(-5px);border-bottom-color:var(--saffron)}
