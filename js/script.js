@@ -169,16 +169,16 @@
   /* ---- Visit counter (global via CountAPI, with local fallback) ---- */
   var vc = document.getElementById("visitCount");
   if (vc) {
+    var BASE = 100000; // start the count from 1 lakh
     var fmt = function (n) { return Number(n).toLocaleString("en-IN"); };
     var localBump = function () {
-      var base = 1000; // seed so the number looks established
       var n = parseInt(localStorage.getItem("spd_visits") || "0", 10);
       if (!sessionStorage.getItem("spd_counted_session")) {
         n += 1;
         localStorage.setItem("spd_visits", String(n));
         sessionStorage.setItem("spd_counted_session", "1");
       }
-      vc.textContent = fmt(base + n);
+      vc.textContent = fmt(BASE + n);
     };
     // Try a global counter first; fall back to local if unavailable
     var done = false;
@@ -188,7 +188,7 @@
       .then(function (data) {
         if (done) return; done = true; clearTimeout(timer);
         var count = data && (data.count != null ? data.count : (data.value != null ? data.value : null));
-        if (count != null) vc.textContent = fmt(count); else localBump();
+        if (count != null) vc.textContent = fmt(BASE + Number(count)); else localBump();
       })
       .catch(function () { if (done) return; done = true; clearTimeout(timer); localBump(); });
   }
