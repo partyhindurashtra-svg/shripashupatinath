@@ -33,7 +33,6 @@
     { src: "assets/gallery/img-27.jpg", cap: "The dham at golden hour" },
     { src: "assets/gallery/img-28.jpg", cap: "The finished dham in its grove" },
     { src: "assets/gallery/img-29.jpg", cap: "Shri Pashupatinath Dham today" },
-    { src: "assets/gallery/img-34.jpg", cap: "Kalash Yatra by the sacred sarovar" },
     { src: "assets/gallery/img-35.jpg", cap: "Havan during the Pran Pratishtha" },
     { src: "assets/gallery/img-30.jpg", cap: "The Saini family offering worship" },
     { src: "assets/gallery/img-31.jpg", cap: "The family with trishuls at the dham" },
