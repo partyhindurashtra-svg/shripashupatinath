@@ -272,6 +272,8 @@ img{max-width:100%;display:block}
 .bhandara-2024{max-width:var(--maxw);margin:2.6rem auto 0;background:var(--cream);border-radius:var(--radius);
   padding:2rem 1.4rem;box-shadow:0 14px 40px rgba(40,10,0,.35);text-align:left}
 .bhandara-2024 .section-head{margin-bottom:1.6rem}
+.bhandara-2024 h2{color:var(--maroon)}
+.bhandara-2024 .eyebrow{color:var(--saffron-deep)}
 .bhandara-2024 .prat-poster img{max-height:none}
 
 /* Countdown */
