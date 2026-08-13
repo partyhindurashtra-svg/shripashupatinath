@@ -3,7 +3,7 @@
 Official website of **Shri Pashupatinath Dham** — a sacred temple of Lord Shiva (Pashupati) at
 **Hassangarh, Sampla, District Rohtak – 124404, Haryana, India**.
 
-🌐 **Live site:** https://shripashupatinath.com
+🌐 **Live site:** https://shripashupatidham.com
 
 The dham is inspired by the holy **Pashupatinath Mandir of Kathmandu, Nepal**, from where the
 sacred **Shivling** was brought.
@@ -48,13 +48,13 @@ assets/
   maha-mrityunjaya.ogg   Fallback chant
   kathmandu-pashupatinath.jpg  Pashupatinath Temple, Kathmandu
   dr-kk-saini.png        Portrait of Prof. Dr. K. K. Saini
-CNAME               Custom domain (shripashupatinath.com)
+CNAME               Custom domain (shripashupatidham.com)
 ```
 
 ## Deployment
 
 Served via **GitHub Pages** from the `main` branch. The `CNAME` file maps the custom
-domain `shripashupatinath.com`.
+domain `shripashupatidham.com`.
 
 ## Credits
 
