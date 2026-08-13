@@ -261,7 +261,10 @@ img{max-width:100%;display:block}
 .prat-slot small{color:var(--ink-soft);font-size:.8rem}
 .prat-note{background:var(--cream-2);border-left:4px solid var(--saffron);padding:.8rem 1rem;border-radius:8px;font-size:.9rem}
 .prat-note strong{color:var(--saffron-deep)}
-.prat-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.prat-highlights{list-style:none;margin-top:1rem;display:grid;gap:.55rem}
+.prat-highlights li{background:#fff;border:1px solid var(--cream-2);border-radius:8px;
+  padding:.6rem .85rem;font-size:.9rem;color:var(--ink-soft);box-shadow:0 4px 14px rgba(90,30,0,.05)}
+.prat-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
 .prat-photos figure{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#fff;position:relative}
 .prat-photos img{width:100%;height:260px;object-fit:cover;object-position:center 30%;display:block}
 .prat-photos img.fit-top{object-position:center top}
