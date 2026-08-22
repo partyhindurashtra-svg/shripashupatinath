@@ -76,7 +76,7 @@
     lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
     // Wire up static images (poster, ceremony, Kathmandu, progress) to the lightbox
-    document.querySelectorAll(".prat-poster img, .bhandara-poster img, .prat-photos figure img, .kath-photo img, .progress-imgs figure img").forEach(function (im) {
+    document.querySelectorAll(".prat-poster img, .prat-photos figure img, .kath-photo img, .progress-imgs figure img").forEach(function (im) {
       im.style.cursor = "zoom-in";
       im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
     });
@@ -116,6 +116,64 @@
     ss.addEventListener("mouseleave", restartSS);
     showSlide(0);
     restartSS();
+  }
+
+  /* ---- Bhandara editions: one slide per year, driven by the slides' data-year ---- */
+  var edTrack = document.getElementById("edTrack");
+  if (edTrack) {
+    var edSlides = [].slice.call(edTrack.querySelectorAll(".ed-slide"));
+    var edTabsWrap = document.getElementById("edTabs");
+    var edPrev = document.getElementById("edPrev");
+    var edNext = document.getElementById("edNext");
+    var edCur = 0;
+
+    var edTabs = edSlides.map(function (sl, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "ed-tab";
+      b.setAttribute("role", "tab");
+      var yr = document.createElement("b");
+      yr.textContent = sl.getAttribute("data-year");
+      b.appendChild(yr);
+      var note = sl.getAttribute("data-tab");
+      if (note) {
+        var sp = document.createElement("span");
+        sp.textContent = note;
+        b.appendChild(sp);
+      }
+      b.addEventListener("click", function () { showEd(i); });
+      edTabsWrap.appendChild(b);
+      return b;
+    });
+
+    function showEd(i) {
+      edCur = Math.max(0, Math.min(i, edSlides.length - 1));
+      edSlides.forEach(function (s, k) { s.classList.toggle("active", k === edCur); });
+      edTabs.forEach(function (b, k) {
+        b.classList.toggle("active", k === edCur);
+        b.setAttribute("aria-selected", k === edCur ? "true" : "false");
+      });
+      if (edPrev) edPrev.disabled = edCur === 0;
+      if (edNext) edNext.disabled = edCur === edSlides.length - 1;
+      // Keep the active year in view once there are more tabs than fit
+      var act = edTabs[edCur];
+      if (act) edTabsWrap.scrollLeft = act.offsetLeft - (edTabsWrap.clientWidth - act.offsetWidth) / 2;
+    }
+
+    if (edPrev) edPrev.addEventListener("click", function () { showEd(edCur - 1); });
+    if (edNext) edNext.addEventListener("click", function () { showEd(edCur + 1); });
+
+    // Swipe left/right between years on touch devices
+    var edTouchX = null;
+    edTrack.addEventListener("touchstart", function (e) { edTouchX = e.touches[0].clientX; }, { passive: true });
+    edTrack.addEventListener("touchend", function (e) {
+      if (edTouchX === null) return;
+      var dx = e.changedTouches[0].clientX - edTouchX;
+      edTouchX = null;
+      if (Math.abs(dx) > 50) showEd(edCur + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
+    showEd(0);
   }
 
   /* ---- Mobile nav ---- */

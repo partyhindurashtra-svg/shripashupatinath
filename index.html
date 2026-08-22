@@ -172,12 +172,6 @@
         <p><strong>Every year on 30th November</strong>, prasad and a wholesome meal are served to every devotee and visitor. Sabka swagat hai — all are welcome.</p>
       </div>
 
-      <!-- 2025 Vishal Bhandara poster -->
-      <figure class="bhandara-poster">
-        <img src="assets/poster-2025.jpg" alt="दूसरा विशाल भण्डारा — the second Vishal Bhandara at Shri Pashupatinath Mandir, 30 November 2025" loading="lazy" />
-        <figcaption>॥ दूसरा विशाल भण्डारा ॥ — the second Vishal Bhandara, 30 November 2025</figcaption>
-      </figure>
-
       <!-- Countdown to next Bhandara -->
       <div class="countdown" id="countdown" data-target="2026-11-30T09:00:00">
         <h3>⏳ Countdown to the next Bhandara — 30 November 2026</h3>
@@ -190,31 +184,77 @@
       </div>
     </div>
 
-    <!-- 2024 Pran Pratishtha & Vishal Bhandara -->
-    <div class="bhandara-2024">
-      <div class="section-head">
-        <span class="eyebrow">॥ प्राण प्रतिष्ठा ॥</span>
-        <h2>The 2024 Pran Pratishtha &amp; Vishal Bhandara</h2>
-      </div>
-      <div class="prat-grid">
-        <div class="prat-poster">
-          <img src="assets/poster-2024.jpg" alt="Shri Pashupatinath Mandir — Pran Pratishtha & Vishal Bhandara invitation" loading="lazy" />
-        </div>
-        <div class="prat-text">
-          <p>On <strong>3 September 2023</strong>, <strong>Dr. Kamlesh Kumar Saini</strong> — son of <strong>Col. Bhajan Lal Saini (Retd.)</strong> — together with his family, brought the sacred <strong>murtis of the Shiva Parivar (the Pashupatinath family) from Kathmandu, Nepal</strong>, and by the grace of Lord Shiva had this temple built.</p>
-          <p>On <strong>30 November 2024</strong>, the <strong>Pran Pratishtha</strong> (consecration) of the Shiva Parivar was performed at the dham, along with the first Vishal (grand) Bhandara.</p>
-          <div class="prat-schedule">
-            <div class="prat-slot"><span>🪔</span><strong>Kalash Yatra</strong><small>9:00 – 11:00 AM</small></div>
-            <div class="prat-slot"><span>🕉️</span><strong>Pran Pratishtha</strong><small>11:52 AM – 12:33 PM</small></div>
-            <div class="prat-slot"><span>🍲</span><strong>Vishal Bhandara</strong><small>12:01 – 3:59 PM</small></div>
-          </div>
-          <p class="prat-note">🙏 All Shiva devotees are warmly welcome. <strong>Please note: no offerings or donations of any kind are solicited.</strong></p>
+    <!-- The Bhandara year by year — one slide per edition -->
+    <div class="editions" id="editions">
+      <div class="ed-head">
+        <span class="eyebrow">॥ वर्ष दर वर्ष ॥</span>
+        <h3>The Bhandara, Year by Year</h3>
+        <div class="ed-nav">
+          <button class="ed-btn" id="edPrev" aria-label="Previous year">‹</button>
+          <div class="ed-tabs" id="edTabs" role="tablist" aria-label="Choose a Bhandara year"><!-- year tabs built by script.js --></div>
+          <button class="ed-btn" id="edNext" aria-label="Next year">›</button>
         </div>
       </div>
-      <div class="prat-photos">
-        <figure><img src="assets/gallery/img-35.jpg" alt="Havan during the Pran Pratishtha" loading="lazy"/><figcaption>Havan during the consecration</figcaption></figure>
-        <figure><img src="assets/gallery/img-33.jpg" alt="Dr. Kamlesh Kumar Saini and family with the sacred trishul" loading="lazy"/><figcaption>Dr. Kamlesh Kumar Saini &amp; family</figcaption></figure>
-        <figure><img class="fit-top" src="assets/gallery/img-30.jpg" alt="The Saini family offering worship" loading="lazy"/><figcaption>The Saini family offering worship</figcaption></figure>
+
+      <div class="ed-viewport">
+        <div class="ed-track" id="edTrack">
+
+          <!-- ===== 2024 ===== -->
+          <article class="ed-slide" data-year="2024" data-tab="Pran Pratishtha">
+            <div class="ed-title">
+              <span class="eyebrow">॥ प्राण प्रतिष्ठा ॥</span>
+              <h4>2024 — Pran Pratishtha &amp; the first Vishal Bhandara</h4>
+            </div>
+            <div class="prat-grid">
+              <div class="prat-poster">
+                <img src="assets/poster-2024.jpg" alt="Shri Pashupatinath Mandir — Pran Pratishtha &amp; Vishal Bhandara invitation, 30 November 2024" loading="lazy" />
+              </div>
+              <div class="prat-text">
+                <p>On <strong>3 September 2023</strong>, <strong>Dr. Kamlesh Kumar Saini</strong> — son of <strong>Col. Bhajan Lal Saini (Retd.)</strong> — together with his family, brought the sacred <strong>murtis of the Shiva Parivar (the Pashupatinath family) from Kathmandu, Nepal</strong>, and by the grace of Lord Shiva had this temple built.</p>
+                <p>On <strong>30 November 2024</strong>, the <strong>Pran Pratishtha</strong> (consecration) of the Shiva Parivar was performed at the dham, along with the first Vishal (grand) Bhandara.</p>
+                <div class="prat-schedule">
+                  <div class="prat-slot"><span>🪔</span><strong>Kalash Yatra</strong><small>9:00 – 11:00 AM</small></div>
+                  <div class="prat-slot"><span>🕉️</span><strong>Pran Pratishtha</strong><small>11:52 AM – 12:33 PM</small></div>
+                  <div class="prat-slot"><span>🍲</span><strong>Vishal Bhandara</strong><small>12:01 – 3:59 PM</small></div>
+                </div>
+                <p class="prat-note">🙏 All Shiva devotees are warmly welcome. <strong>Please note: no offerings or donations of any kind are solicited.</strong></p>
+              </div>
+            </div>
+            <div class="prat-photos">
+              <figure><img src="assets/gallery/img-35.jpg" alt="Havan during the Pran Pratishtha" loading="lazy"/><figcaption>Havan during the consecration</figcaption></figure>
+              <figure><img src="assets/gallery/img-33.jpg" alt="Dr. Kamlesh Kumar Saini and family with the sacred trishul" loading="lazy"/><figcaption>Dr. Kamlesh Kumar Saini &amp; family</figcaption></figure>
+              <figure><img class="fit-top" src="assets/gallery/img-30.jpg" alt="The Saini family offering worship" loading="lazy"/><figcaption>The Saini family offering worship</figcaption></figure>
+            </div>
+          </article>
+
+          <!-- ===== 2025 ===== -->
+          <article class="ed-slide" data-year="2025" data-tab="Dusra Bhandara">
+            <div class="ed-title">
+              <span class="eyebrow">॥ दूसरा विशाल भण्डारा ॥</span>
+              <h4>2025 — The second Vishal Bhandara</h4>
+            </div>
+            <div class="prat-grid">
+              <div class="prat-poster">
+                <img src="assets/poster-2025.jpg" alt="दूसरा विशाल भण्डारा — the second Vishal Bhandara at Shri Pashupatinath Mandir, 30 November 2025" loading="lazy" />
+              </div>
+              <div class="prat-text">
+                <p>On <strong>30 November 2025</strong>, the dham held its <strong>दूसरा विशाल भण्डारा — the second Vishal Bhandara</strong>, carrying forward the tradition begun at the Pran Pratishtha a year earlier.</p>
+                <p>The morning opened with a <strong>Kalash Yatra</strong>, followed by the community feast — prasad and a full meal served free to every devotee and visitor who came for darshan.</p>
+                <div class="prat-schedule">
+                  <div class="prat-slot"><span>🪔</span><strong>Kalash Yatra</strong><small>9:00 – 11:00 AM</small></div>
+                  <div class="prat-slot"><span>🍲</span><strong>Vishal Bhandara</strong><small>12:01 – 3:59 PM</small></div>
+                </div>
+                <p class="prat-note">🙏 All Shiva devotees are warmly welcome. <strong>Please note: no offerings or donations of any kind are solicited.</strong></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- To add next year: copy an <article class="ed-slide"> block above, set data-year
+               and data-tab, drop the new poster in as assets/poster-YYYY.jpg, and update the
+               text. The year tabs and the ‹ › arrows are generated from data-year, so nothing
+               else needs changing. -->
+
+        </div>
       </div>
     </div>
   </section>
