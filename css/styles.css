@@ -161,14 +161,21 @@ img{max-width:100%;display:block}
 .hero-ss .slide{background:#160603}
 .hero-ss .slide img{width:100%;height:100%;object-fit:cover;cursor:default}
 /* Poster slide: the poster is shown whole (contain), so the space around it is
-   filled with a blurred, warm-washed copy of the poster instead of flat black. */
-.hero-ss .poster-slide{position:relative;background:var(--maroon)}
+   filled with a warm glow that surrounds it evenly on all four sides. The base
+   is a radial saffron glow on maroon; the blurred poster only tints it, blurred
+   far enough that no part of the artwork reads as a band or edge. */
+/* NB: no position:relative here — .slide is absolute/inset:0 and must stay that
+   way, or the slide shrinks to the poster's height and the hero's own background
+   photo shows through below it. */
+.hero-ss .poster-slide{
+  background:radial-gradient(ellipse 62% 78% at 50% 46%,rgba(232,119,15,.75),rgba(232,119,15,0) 72%),
+             linear-gradient(160deg,var(--maroon-2),var(--maroon) 45%,#4a1008)}
 .hero-ss .poster-slide .poster-bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;
-  max-height:none;object-fit:cover;filter:blur(38px) saturate(1.5) sepia(.55) brightness(.82);
-  transform:scale(1.18);cursor:default}
+  max-height:none;object-fit:cover;opacity:.45;
+  filter:blur(90px) saturate(1.7) sepia(.5) brightness(.9);
+  transform:scale(1.4);cursor:default}
 .hero-ss .poster-slide::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(90,20,8,.30),rgba(90,20,8,0) 35%,rgba(85,17,10,.55)),
-             linear-gradient(135deg,rgba(232,119,15,.40),rgba(212,175,55,.18) 45%,rgba(109,20,20,.50))}
+  background:radial-gradient(ellipse 58% 72% at 50% 46%,rgba(212,175,55,.30),rgba(74,16,8,.55) 78%)}
 .hero-ss .poster-slide img{position:relative;z-index:2;object-fit:contain;cursor:zoom-in;
   max-height:78vh;width:auto;margin:0 auto;align-self:flex-start;
   border-radius:6px;box-shadow:0 18px 55px rgba(30,6,0,.55)}
