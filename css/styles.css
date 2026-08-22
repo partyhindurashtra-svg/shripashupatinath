@@ -160,7 +160,7 @@ img{max-width:100%;display:block}
 .hero-ss .slides{position:absolute;inset:0}
 .hero-ss .slide{background:#160603}
 .hero-ss .slide img{width:100%;height:100%;object-fit:cover;cursor:default}
-.hero-ss .poster-slide img{object-fit:contain;cursor:zoom-in}
+.hero-ss .poster-slide img{object-fit:contain;cursor:zoom-in;max-height:78vh;width:auto;margin:0 auto;align-self:flex-start}
 .hero .hero-overlay{z-index:2;pointer-events:none}
 .hero .hero-content{z-index:3;transition:opacity .5s ease}
 .hero-ss .slide-dots{bottom:20px}
@@ -247,9 +247,16 @@ img{max-width:100%;display:block}
 .bhandara-note{margin-top:1.8rem;color:#fbecd8}
 .bhandara-note a{color:#fff;text-decoration:underline}
 
+/* 2025 Vishal Bhandara poster */
+.bhandara-poster{max-width:560px;margin:2.2rem auto 0;background:#fff;border:3px solid var(--gold);
+  border-radius:var(--radius);overflow:hidden;box-shadow:0 14px 40px rgba(40,10,0,.35)}
+.bhandara-poster img{width:100%;height:auto;display:block;cursor:zoom-in}
+.bhandara-poster figcaption{font-family:'Noto Serif Devanagari',serif;font-size:.86rem;color:var(--maroon);
+  background:var(--cream);padding:.6rem .8rem;text-align:center}
+
 /* ===== Pran Pratishtha ===== */
 .pratishtha{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
-.prat-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.prat-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start}
 .prat-poster{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:3px solid var(--gold);background:#fff;margin:0 auto}
 .prat-poster img{height:auto;max-height:440px;width:auto;max-width:100%;display:block;cursor:zoom-in}
 .prat-text p{color:var(--ink-soft);margin-bottom:1rem}
@@ -274,7 +281,7 @@ img{max-width:100%;display:block}
 .bhandara-2024 .section-head{margin-bottom:1.6rem}
 .bhandara-2024 h2{color:var(--maroon)}
 .bhandara-2024 .eyebrow{color:var(--saffron-deep)}
-.bhandara-2024 .prat-poster img{max-height:none}
+.bhandara-2024 .prat-poster img{max-height:600px}
 
 /* Countdown */
 .countdown{margin-top:2.4rem}

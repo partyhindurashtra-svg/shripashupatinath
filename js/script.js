@@ -76,7 +76,7 @@
     lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
     // Wire up static images (poster, ceremony, Kathmandu, progress) to the lightbox
-    document.querySelectorAll(".prat-poster img, .prat-photos figure img, .kath-photo img, .progress-imgs figure img").forEach(function (im) {
+    document.querySelectorAll(".prat-poster img, .bhandara-poster img, .prat-photos figure img, .kath-photo img, .progress-imgs figure img").forEach(function (im) {
       im.style.cursor = "zoom-in";
       im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
     });
