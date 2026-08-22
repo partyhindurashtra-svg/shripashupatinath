@@ -94,7 +94,7 @@
       d.setAttribute("aria-label", "Go to slide " + (i + 1));
       d.addEventListener("click", function () { showSlide(i); restartSS(); });
       dotsWrap.appendChild(d);
-      var im = sl.querySelector("img");
+      var im = sl.querySelector("img:not(.poster-bg)");
       // Only the poster opens full-size (hero photos stay as background)
       if (im && sl.classList.contains("poster-slide")) {
         im.addEventListener("click", function () { openLightbox(im.src, im.alt); });
